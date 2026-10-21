@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ресторан «Эдем» в Павлодаре — Изысканная кухня и атмосфера</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0F2E23;--accent:#D4AF37;--dark:#121212;--light:#F9F8F6;--gray:#7A7A7A}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Montserrat,sans-serif;background:var(--light);color:var(--dark);overflow-x:hidden}h1,h2,h3,.serif{font-family:"Cormorant Garamond",serif}
+header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(15,46,35,.95);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;gap:20px;padding:18px 5%;border-bottom:1px solid rgba(212,175,55,.2)}
+.logo{font-size:28px;color:var(--accent);font-weight:700;letter-spacing:2px;text-decoration:none;white-space:nowrap}nav{display:flex;align-items:center;gap:24px}nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1px;transition:.3s}nav a:hover,nav a.active{color:var(--accent)}
+.book-btn{display:inline-block;background:var(--accent);color:var(--dark);padding:12px 24px;border:0;border-radius:30px;font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:1px;text-decoration:none;transition:.3s;cursor:pointer}.book-btn:hover{background:#fff;transform:translateY(-2px)}
+.hero{min-height:100vh;background:linear-gradient(rgba(15,46,35,.6),rgba(18,18,18,.7)),url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;color:#fff;padding:120px 20px 60px}
+.hero h1{font-size:clamp(50px,7vw,90px);color:var(--accent);margin-bottom:20px;line-height:1.1}.hero p{font-size:18px;max-width:650px;margin-bottom:35px;font-weight:300;line-height:1.7;letter-spacing:.5px}.hero-btns{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}.btn-outline{border:2px solid var(--accent);color:#fff;padding:12px 30px;border-radius:30px;text-decoration:none;text-transform:uppercase;font-size:12px;letter-spacing:1px;font-weight:600;transition:.3s}.btn-outline:hover{background:var(--accent);color:var(--dark)}
+.about{padding:110px 10%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;background:#fff}.about-img img{width:100%;display:block;border-radius:8px;box-shadow:20px 20px 0 var(--primary)}.eyebrow{color:var(--accent);text-transform:uppercase;font-weight:600;letter-spacing:2px;font-size:13px}.about-text h2,.specials h2{font-size:clamp(36px,4vw,48px);color:var(--primary);margin:15px 0 25px}.about-text p{font-size:15px;line-height:1.9;color:var(--gray);margin-bottom:18px}
+.photo-section{padding:85px 10%;background:#fff;text-align:center}.photo-panel{max-width:850px;margin:32px auto 0;padding:42px 28px;border:1px solid rgba(212,175,55,.45);border-radius:12px;background:linear-gradient(135deg,#f9f8f6,#fff);box-shadow:0 12px 32px rgba(0,0,0,.05)}.photo-panel p{max-width:620px;margin:0 auto 24px;color:var(--gray);font-size:15px;line-height:1.8}.photo-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}.photo-links a{display:inline-block}.specials{padding:100px 10%;background:var(--light);text-align:center}.specials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:30px;margin-top:45px;text-align:left}.dish-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.05);transition:.3s}.dish-card:hover{transform:translateY(-7px)}.dish-img{height:240px;background-size:cover;background-position:center}.dish-content{padding:25px}.dish-title{font-size:24px;color:var(--primary);margin-bottom:10px}.dish-desc{font-size:14px;color:var(--gray);margin-bottom:20px;line-height:1.7}.dish-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #eee;padding-top:15px}.dish-price{font-size:20px;font-weight:700;color:var(--accent);font-family:"Cormorant Garamond",serif}.dish-footer a{color:var(--primary);text-decoration:none;font-weight:600;font-size:13px}
+footer{background:var(--primary);color:#fff;padding:55px 10% 30px;text-align:center;border-top:3px solid var(--accent)}footer p{color:rgba(255,255,255,.7);font-size:13px;line-height:1.8;margin-top:18px}
+@media(max-width:850px){.photo-section{padding:70px 7%}.photo-panel{padding:32px 20px}header{padding:15px 4%;flex-wrap:wrap;justify-content:center}nav{gap:16px;flex-wrap:wrap;justify-content:center}nav a{font-size:11px}.header-book{display:none}.about{padding:80px 7%;grid-template-columns:1fr;gap:40px}.about-img{max-width:600px;margin:auto}.specials{padding:80px 7%}}
+@media(max-width:480px){.logo{font-size:24px}header{gap:12px}.hero h1{font-size:46px}.hero p{font-size:16px}.hero-btns{flex-direction:column;width:min(100%,280px)}.hero-btns a{width:100%}.dish-footer{align-items:flex-start}.specials-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<a href="index.html" class="logo">ЭДЕМ</a>
+<nav aria-label="Основная навигация"><a href="index.html" class="active">Главная</a><a href="menu.html">Меню</a><a href="contacts.html">Контакты &amp; Банкеты</a></nav>
+<a href="contacts.html" class="book-btn header-book">Забронировать стол</a>
+</header>
+<section class="hero">
+<h1>Ресторан «Эдем»</h1>
+<p>Уютная атмосфера, изысканные блюда на хоспере и европейская кухня в самом сердце Павлодара</p>
+<div class="hero-btns"><a href="menu.html" class="book-btn">Смотреть меню</a><a href="contacts.html" class="btn-outline">Забронировать</a></div>
+</section>
+<section class="about">
+<div class="about-img"><img src="https://avatars.mds.yandex.net/get-altay/15386533/2a000001947eae6029bbd673df83a9d77ea8/XXL_height" alt="Вход в ресторан Эдем в Павлодаре, фото из Яндекс Карт" loading="lazy"></div>
+<div class="about-text"><span class="eyebrow">Оазис вкуса</span><h2>Искусство гастрономии и безупречный сервис</h2>
+<p>Ресторан «Эдем» на улице Ломова, 58/1 в Павлодаре — это место, где традиции гостеприимства встречаются с современным ресторанным искусством. Мы создали пространство для семейных ужинов, романтических встреч и торжеств.</p>
+<p>Авторская подача от шеф-повара, профессиональный мангал-хоспер и отборные ингредиенты гарантируют незабываемый вкус каждого блюда.</p>
+<a href="contacts.html" class="book-btn">Связаться с нами</a></div>
+</section>
+<section class="photo-section" id="photos">
+<span class="eyebrow">Загляните внутрь</span>
+<h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(36px,4vw,48px);color:var(--primary);margin:15px 0 0">Фотографии ресторана</h2>
+<div class="photo-panel" style="max-width:1000px">
+<p>Реальное фото входа в ресторан взято из карточки заведения в Яндекс Картах. Откройте карточки на картах, чтобы посмотреть остальные фотографии, размещённые пользователями.</p>
+<a href="https://yandex.com/maps/org/edem/241211175003/" target="_blank" rel="noopener noreferrer" style="display:block;max-width:760px;margin:0 auto 24px">
+<img src="https://avatars.mds.yandex.net/get-altay/15386533/2a000001947eae6029bbd673df83a9d77ea8/XXL_height" alt="Фасад и вход ресторана Эдем — фотография из Яндекс Карт" loading="lazy" style="display:block;width:100%;max-height:460px;object-fit:cover;border-radius:10px">
+</a>
+<p style="font-size:12px;margin-top:-10px">Источник фотографии: Яндекс Карты · «Эдем», Павлодар</p>
+<div class="photo-links">
+<a class="book-btn" href="https://yandex.com/maps/org/edem/241211175003/gallery/" target="_blank" rel="noopener noreferrer">Все фото в Яндекс Картах</a>
+<a class="btn-outline" style="border-color:var(--primary);color:var(--primary)" href="https://2gis.kz/pavlodar/search/Эдем" target="_blank" rel="noopener noreferrer">Фото и карточка в 2ГИС</a>
+</div>
+</div>
+</section>
+<section class="specials">
+<span class="eyebrow">Рекомендации шефа</span><h2>Популярные позиции меню</h2>
+<div class="specials-grid">
+<article class="dish-card"><div class="dish-img" style="background-image:url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=600&amp;q=80')"></div><div class="dish-content"><h3 class="dish-title">Стейк Рибай на хоспере</h3><p class="dish-desc">Мраморная говядина премиум-класса, приготовленная на древесных углях с розмарином и фирменным соусом.</p><div class="dish-footer"><span class="dish-price">По запросу</span><a href="menu.html">В меню →</a></div></div></article>
+<article class="dish-card"><div class="dish-img" style="background-image:url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&amp;fit=crop&amp;w=600&amp;q=80')"></div><div class="dish-content"><h3 class="dish-title">Фирменный шашлык ассорти</h3><p class="dish-desc">Сочные кусочки маринованного мяса на шпажках, подаются с маринованным луком, зеленью и лавашом.</p><div class="dish-footer"><span class="dish-price">от 3 100 ₸</span><a href="menu.html">В меню →</a></div></div></article>
+<article class="dish-card"><div class="dish-img" style="background-image:url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=600&amp;q=80')"></div><div class="dish-content"><h3 class="dish-title">Морские деликатесы</h3><p class="dish-desc">Изысканные дары моря, запечённые с травами, сливочным сыром и лимонным фрешем.</p><div class="dish-footer"><span class="dish-price">Премиум</span><a href="menu.html">В меню →</a></div></div></article>
+</div>
+</section>
+<footer><a href="index.html" class="logo">ЭДЕМ</a><p>г. Павлодар, ул. Ломова, 58/1 | Телефон: +7 (7182) 55-66-23</p><p>© 2026 Ресторан «Эдем». Все права защищены.</p></footer>
+</body>
+</html>
